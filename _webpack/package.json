@@ -1,0 +1,28 @@
+{
+  "name": "Webpack-HTML-Boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate to build HTML pages with Webpack",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate.git"
+  },
+  "keywords": [
+    "Boilerplate",
+    "HTML",
+    "Webpack",
+    "SCSS",
+    "ES6, ES7, ES8, ESNEXT"
+  ],
+  "author": {
+    "name": "Cristobal Dominguez",
+    "email": "cristobald@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate"
+  },
+  "homepage": "https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate#readme",
+  "dependencies": {}
+}
