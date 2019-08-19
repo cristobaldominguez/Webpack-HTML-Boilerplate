@@ -1,5 +1,0 @@
-(function(){
-
-	// Add functions here
-
-})()
