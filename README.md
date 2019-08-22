@@ -24,4 +24,4 @@ Una vez instalado Webpack estará todo listo para comenzar a trabajar, por lo qu
 
 #### Webpack DevServer
 El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.dev.js`.
-Una vez que se ejecute el comando `npm start` se abrirá el navegador por defeto del computador, sin embargo podríamos especificar qué navegador queremos que se abra con la opción: `open: 'Google Chrome'` en la línea 53 del anteriormente mencionado archivo.
+Una vez que se ejecute el comando `npm start` se abrirá el navegador por defeto del computador, sin embargo podríamos especificar qué navegador queremos que se abra; por ejemplo con la opción: `open: 'Google Chrome'` en las configuraciones del devServer, en el anteriormente mencionado archivo.
