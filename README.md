@@ -25,3 +25,6 @@ Una vez instalado Webpack estará todo listo para comenzar a trabajar, por lo qu
 #### Webpack DevServer
 El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.dev.js`.
 Una vez que se ejecute el comando `npm start` se abrirá el navegador por defeto del computador, sin embargo podríamos especificar qué navegador queremos que se abra; por ejemplo con la opción: `open: 'Google Chrome'` en las configuraciones del devServer, en el anteriormente mencionado archivo.
+
+#### Carpetas para el Servidor 
+En la carpeta raíz encontrarás otras dos que su nombre comienzan con `_`, las que serían: `_resources` y `_webpack`. Se han creado con ese nombre con el objetivo de recordar rápidamente cuales son las carpetas que no se deben subir al servidor. La primera porque contiene todos los archivos SASS que aunque quieras compartir el código fuente, el navegador igualmente no tendrá como mostrar ese contenido. La segunda es porque los archivos de configuración de Webpack son muy pesados y agregarías peso innecesario en el servidor.
