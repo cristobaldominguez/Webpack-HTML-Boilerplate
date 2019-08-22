@@ -25,6 +25,7 @@ module.exports = merge(common, {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
+          'css-hot-loader',
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
@@ -51,6 +52,7 @@ module.exports = merge(common, {
   },
   devServer: {
     open: true, // open: 'Google Chrome'
+    hot: true,
     contentBase: root_path(),
     compress: true,
     port: 8081
