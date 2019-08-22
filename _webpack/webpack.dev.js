@@ -4,6 +4,7 @@ const merge = require('webpack-merge')
 const common = require('./webpack.common')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
+const root_path = require('./_utils/rootPath')
 
 
 module.exports = merge(common, {
@@ -51,5 +52,11 @@ module.exports = merge(common, {
         ]
       }
     ]
+  },
+  devServer: {
+    open: true, // open: 'Google Chrome'
+    contentBase: root_path(),
+    compress: true,
+    port: 8081
   }
 })

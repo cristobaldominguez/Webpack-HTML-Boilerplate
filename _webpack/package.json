@@ -4,7 +4,7 @@
   "description": "A boilerplate to build HTML pages with Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.dev.js --watch",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.pro.js"
   },
   "repository": {
@@ -35,6 +35,7 @@
     "terser-webpack-plugin": "^1.4.1",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
   }
 }
