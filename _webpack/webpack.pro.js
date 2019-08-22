@@ -18,7 +18,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
+    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
     new webpack.LoaderOptionsPlugin({
       options: {
           postcss: [autoprefixer()]
