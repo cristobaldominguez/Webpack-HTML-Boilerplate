@@ -9,13 +9,9 @@ const root_path = require('./_utils/rootPath')
 
 module.exports = merge(common, {
   mode: 'development',
-  output: {
-    filename: 'scripts/[name].bundle.js',
-    path: path.resolve(__dirname, '../assets/')
-  },
   plugins: [
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
+    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
     new webpack.LoaderOptionsPlugin({
       options: {
           postcss: [
