@@ -77,11 +77,11 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/assets/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "../_resources/scripts/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,6 +94,28 @@
 /***/ (function(module, exports) {
 
 eval("\n\n//# sourceURL=webpack:///../_resources/scripts/main.js?");
+
+/***/ }),
+
+/***/ "../_resources/scss/style.scss":
+/*!*************************************!*\
+  !*** ../_resources/scss/style.scss ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///../_resources/scss/style.scss?");
+
+/***/ }),
+
+/***/ 0:
+/*!*************************************************************************!*\
+  !*** multi ../_resources/scripts/main.js ../_resources/scss/style.scss ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ../_resources/scripts/main.js */\"../_resources/scripts/main.js\");\nmodule.exports = __webpack_require__(/*! ../_resources/scss/style.scss */\"../_resources/scss/style.scss\");\n\n\n//# sourceURL=webpack:///multi_../_resources/scripts/main.js_../_resources/scss/style.scss?");
 
 /***/ })
 

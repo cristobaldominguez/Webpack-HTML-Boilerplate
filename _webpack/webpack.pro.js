@@ -21,9 +21,7 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
     new webpack.LoaderOptionsPlugin({
       options: {
-          postcss: [
-              autoprefixer()
-          ]
+          postcss: [autoprefixer()]
       }
     })
   ],
