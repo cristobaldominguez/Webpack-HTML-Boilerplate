@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/cristobaldominguez/Webpack-HTML-Boilerplate.git"
   },
-  "keywords": [ "Boilerplate", "HTML", "Webpack", "SCSS" ],
+  "keywords": [
+    "Boilerplate",
+    "HTML",
+    "Webpack",
+    "SCSS"
+  ],
   "author": {
     "name": "Cristobal Dominguez",
     "email": "cristobald@gmail.com"
