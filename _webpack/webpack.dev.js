@@ -54,6 +54,7 @@ module.exports = merge(common, {
     open: true, // open: 'Google Chrome'
     hot: true,
     contentBase: root_path(),
+    watchContentBase: true,
     compress: true,
     port: 8081
   }
