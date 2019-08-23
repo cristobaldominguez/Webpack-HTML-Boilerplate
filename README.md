@@ -13,7 +13,20 @@ Para ejecutar esta instalación deberemos asegurarnos de tener instalada una ver
 
 
 ### Instalación y ejecución
-Para hacer uso correcto del boilerplate deberemos entrar desde la consola a la carpeta `_webpack` (`Webpack-HTML-Boilerplate/_webpack`) y ejecutar el comando: `npm install` ó su abreviación: `npm i`. Eso generará dentro de la carpeta una nueva que se llamará `node_modules` y será donde estarán instaladas todas las dependencias necesarias para la ejecución de Webpack y sus herramientas.
+Para hacer uso correcto del boilerplate __deberemos entrar__ desde la consola __a la carpeta `_webpack`__ que se encuentra en la raíz del boilerplate (o sea en: `Webpack-HTML-Boilerplate/_webpack`) y ejecutar el
+comando: `npm install` ó su abreviación: `npm i`.
+
+<br />
+
+***
+
+__No olvidar, el comando `npm install` debe ser ejecutado en la carpeta `_webpack`__.
+
+***
+
+<br />
+
+Este comando instalará, dentro de la carpeta `_webpack/node_modules`, todas las dependencias necesarias para la ejecución de Webpack y sus herramientas, por lo tanto es absolutamente necesario que el comando se realize en el anteriormente comentado lugar.
 
 
 Una vez instalado Webpack estará todo listo para comenzar a trabajar, por lo que podremos utilizar dos comandos:
@@ -21,6 +34,14 @@ Una vez instalado Webpack estará todo listo para comenzar a trabajar, por lo qu
 - Start: con el comando `npm run start` (o su atajo: `npm start`) iniciaremos el servidor y a su vez se abrirá el navegador por defecto para que podamos ir viendo los cambios que se vayan realizando. Es importante destacar que este comando quedará esperando cada cambio que se realice en los archivos, por ende deberá seguir ejecutándose indefinidamente. Si queremos detener su ejecución utilizaremos la combinación de teclas: `control + c` y para reiniciar volveremos a usar el comando `npm run start`.
 - Build: el comando `npm run build` minifica tanto los archivos js como css, dejando todo listo para subir a producción.
 
+<br />
+
+***
+
+Es necesario aclarar que los comandos `npm run start` y `npm run build` deben ser ejecutados en la consola dentro de la carpeta `_webpack`, al igual que el comando `npm install`.
+
+***
+<br />
 
 #### Webpack DevServer
 El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.conf.js`.
