@@ -1,11 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-const common = require('./webpack.common')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 const root_path = require('./_utils/rootPath')
 const configuration = require('../webpack.c')
+const common = require('./webpack.common')
 
 
 module.exports = merge(common, {
@@ -19,7 +20,8 @@ module.exports = merge(common, {
               autoprefixer()
           ]
       }
-    })
+    }),
+    new CleanTerminalPlugin()
   ],
   module: {
     rules: [
