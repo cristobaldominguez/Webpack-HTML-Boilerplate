@@ -48,6 +48,13 @@ module.exports = merge(common, {
             options: { sourceMap: true }
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader'
+        }
       }
     ]
   },
