@@ -1,4 +1,4 @@
 module.exports = {
-	serverOpen: 'Google Chrome', // 'Safari Technology Preview', 'Firefox', 'Firefox Developer Edition', 'Opera', 
+	serverOpen: 'Chrome', // 'Google Chrome', 'Firefox', 'Opera', 'Firefox Developer Edition', 'Safari', 'Safari Technology Preview' 
 	serverPort: 8081,
 }
