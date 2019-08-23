@@ -5,7 +5,7 @@ const common = require('./webpack.common')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
 const root_path = require('./_utils/rootPath')
-const configuration = require('../webpack.conf')
+const configuration = require('../webpack.c')
 
 
 module.exports = merge(common, {
