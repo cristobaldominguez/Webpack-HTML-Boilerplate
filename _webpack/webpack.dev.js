@@ -5,7 +5,7 @@ const common = require('./webpack.common')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const autoprefixer = require('autoprefixer')
 const root_path = require('./_utils/rootPath')
-const configuration = require('../webpack.conf')
+const configuration = require('./webpack.conf')
 
 
 module.exports = merge(common, {
@@ -39,7 +39,7 @@ module.exports = merge(common, {
             loader: 'postcss-loader',
             options: {
               config: {
-                path: './postcss.config'
+                path: './_webpack/postcss.config'
               }
             }
           },
@@ -54,7 +54,7 @@ module.exports = merge(common, {
   devServer: {
     open: configuration.serverOpen || true,
     hot: true,
-    contentBase: root_path(),
+    contentBase: root_path() + '/public',
     watchContentBase: true,
     compress: true,
     port: configuration.serverPort

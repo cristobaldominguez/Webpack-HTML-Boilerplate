@@ -4,8 +4,8 @@
   "description": "A boilerplate to build HTML pages with Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.pro.js"
+    "start": "webpack-dev-server --config ./_webpack/webpack.dev.js",
+    "build": "webpack --config ./_webpack/webpack.pro.js"
   },
   "repository": {
     "type": "git",

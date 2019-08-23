@@ -13,18 +13,18 @@ Para ejecutar esta instalación deberemos asegurarnos de tener instalada una ver
 
 
 ### Instalación y ejecución
-Para hacer uso correcto del boilerplate deberemos entrar desde la consola a la carpeta `_webpack` (`Webpack-HTML-Boilerplate/_webpack`) y ejecutar el comando: `npm install` ó su abreviación: `npm i`. Eso generará dentro de la carpeta una nueva que se llamará `node_modules` y será donde estarán instaladas todas las dependencias necesarias para la ejecución de Webpack y sus herramientas.
+Para hacer uso correcto del boilerplate deberemos entrar desde la consola a la raiz del proyecto y ejecutar el comando: `npm install` ó su abreviación: `npm i`. Eso generará dentro de la carpeta una nueva que se llamará `node_modules` y será donde estarán instaladas todas las dependencias necesarias para la ejecución de Webpack y sus herramientas.
 
 
-Una vez instalado Webpack estará todo listo para comenzar a trabajar, por lo que podremos utilizar dos comandos:
+Una vez instalados los módulos, estará todo listo para comenzar a trabajar, por lo que podremos utilizar dos comandos:
 
 - Start: con el comando `npm run start` (o su atajo: `npm start`) iniciaremos el servidor y a su vez se abrirá el navegador por defecto para que podamos ir viendo los cambios que se vayan realizando. Es importante destacar que este comando quedará esperando cada cambio que se realice en los archivos, por ende deberá seguir ejecutándose indefinidamente. Si queremos detener su ejecución utilizaremos la combinación de teclas: `control + c` y para reiniciar volveremos a usar el comando `npm run start`.
 - Build: el comando `npm run build` minifica tanto los archivos js como css, dejando todo listo para subir a producción.
 
 
 #### Webpack DevServer
-El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.conf.js`.
+El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `_webpack/webpack.conf.js`.
 Una vez que se ejecute el comando `npm start` se abrirá el navegador por defeto del computador, sin embargo podríamos especificar qué navegador queremos que se abra; por ejemplo con la opción: `open: 'Google Chrome'` en las configuraciones del devServer, en el anteriormente mencionado archivo.
 
-#### Carpetas para el Servidor 
-En la carpeta raíz encontrarás otras dos que su nombre comienzan con `_`, las que serían: `_resources` y `_webpack`. Se han creado con ese nombre con el objetivo de recordar rápidamente cuales son las carpetas que no se deben subir al servidor. La primera porque contiene todos los archivos SASS que aunque quieras compartir el código fuente, el navegador igualmente no tendrá como mostrar ese contenido. La segunda es porque los archivos de configuración de Webpack son muy pesados y agregarías peso innecesario en el servidor.
+#### Carpetas para el Servidor
+Al servidor se debe subir sólo el contenido que está en la carpeta `public`. 

@@ -42,7 +42,7 @@ module.exports = merge(common, {
             loader: 'postcss-loader',
             options: {
               config: { 
-                path: './postcss.config.js' 
+                path: './_webpack/postcss.config'
               } 
             }
           },
