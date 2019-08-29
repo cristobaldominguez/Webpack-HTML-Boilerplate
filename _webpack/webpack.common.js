@@ -12,5 +12,8 @@ module.exports = {
 		filename: 'scripts/[name].bundle.js',
 		path: path.join(root_path(), '/assets/'),
 		publicPath: '/assets/'
-	}
+	},
+	resolve: {
+		modules: [ path.resolve(__dirname, 'node_modules/') ]
+	},
 }
