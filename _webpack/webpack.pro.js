@@ -10,21 +10,6 @@ const autoprefixer = require('autoprefixer')
 
 module.exports = merge(common, {
   mode: 'production',
-  optimization: {
-    minimizer: [
-      new TerserPlugin(),
-      new OptimizeCssAssetsPlugin()
-    ]
-  },
-  plugins: [
-    new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-          postcss: [autoprefixer()]
-      }
-    })
-  ],
   module: {
     rules: [
       {
@@ -56,6 +41,21 @@ module.exports = merge(common, {
           loader: 'babel-loader'
         }
       }
+    ]
+  },
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+          postcss: [autoprefixer()]
+      }
+    })
+  ],
+  optimization: {
+    minimizer: [
+      new TerserPlugin(),
+      new OptimizeCssAssetsPlugin()
     ]
   }
 })

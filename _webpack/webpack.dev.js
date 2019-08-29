@@ -11,18 +11,6 @@ const common = require('./webpack.common')
 
 module.exports = merge(common, {
   mode: 'development',
-  plugins: [
-    new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
-    new webpack.LoaderOptionsPlugin({
-      options: {
-          postcss: [
-              autoprefixer()
-          ]
-      }
-    }),
-    new CleanTerminalPlugin()
-  ],
   module: {
     rules: [
       {
@@ -60,6 +48,18 @@ module.exports = merge(common, {
       }
     ]
   },
+  plugins: [
+    new webpack.ProgressPlugin(),
+    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
+    new webpack.LoaderOptionsPlugin({
+      options: {
+          postcss: [
+              autoprefixer()
+          ]
+      }
+    }),
+    new CleanTerminalPlugin()
+  ],
   devServer: {
     open: configuration.serverOpen || true,
     hot: true,

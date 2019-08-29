@@ -4,8 +4,6 @@ const root_path = require('./_utils/rootPath')
 
 module.exports = {
 	entry: {
-		// style: ['../_resources/scss/style.scss'],
-		// main: '../_resources/scripts/main.js'
 		main: ['../_resources/scripts/main.js', '../_resources/scss/style.scss']
 	},
 	output: {
