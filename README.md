@@ -44,7 +44,7 @@ Es necesario aclarar que los comandos `npm run start` y `npm run build` deben se
 <br />
 
 #### Webpack DevServer
-El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.conf.js`.
+El puerto por defecto que se utilizará será el :8081, sin embargo dentro de las configuraciones podremos cambiarlo en el archivo `webpack.c.js`.
 Una vez que se ejecute el comando `npm start` se abrirá el navegador por defeto del computador, sin embargo podríamos especificar qué navegador queremos que se abra; por ejemplo con la opción: `open: 'Google Chrome'` en las configuraciones del devServer, en el anteriormente mencionado archivo.
 
 #### Carpetas para el Servidor 
