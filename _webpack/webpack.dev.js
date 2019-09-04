@@ -62,10 +62,12 @@ module.exports = merge(common, {
   ],
   devServer: {
     open: configuration.serverOpen || true,
+    port: configuration.serverPort || 8081,
+    host: configuration.serverHost || '0.0.0.0',
     hot: true,
     contentBase: root_path(),
     watchContentBase: true,
     compress: true,
-    port: configuration.serverPort
+    disableHostCheck: true
   }
 })
