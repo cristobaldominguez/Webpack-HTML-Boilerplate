@@ -49,6 +49,7 @@ module.exports = merge(common, {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin({}),
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
     new webpack.LoaderOptionsPlugin({
