@@ -1,9 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const autoprefixer = require('autoprefixer')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 const root_path = require('./_utils/rootPath')
 const configuration = require('../webpack.c')
 const common = require('./webpack.common')
@@ -20,17 +19,12 @@ module.exports = merge(common, {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: {
-              url: false,
-              sourceMap: true
-            }
+            options: { url: false, sourceMap: true }
           },
           {
             loader: 'postcss-loader',
             options: {
-              config: {
-                path: './postcss.config'
-              }
+              postcssOptions: { path: './postcss.config' }
             }
           },
           {
@@ -43,7 +37,10 @@ module.exports = merge(common, {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: ["@babel/preset-env"]
+          }
         }
       }
     ]
@@ -51,24 +48,23 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin({}),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
+    new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
     new webpack.LoaderOptionsPlugin({
       options: {
-          postcss: [
-              autoprefixer()
-          ]
+        postcss: [
+          autoprefixer()
+        ]
       }
-    }),
-    new CleanTerminalPlugin()
+    })
   ],
   devServer: {
+    static: {
+      directory: root_path(),
+    },
     open: configuration.serverOpen || true,
     port: configuration.serverPort || 8081,
     host: configuration.serverHost || '0.0.0.0',
     hot: true,
-    contentBase: root_path(),
-    watchContentBase: true,
-    compress: true,
-    disableHostCheck: true
+    compress: true
   }
 })
