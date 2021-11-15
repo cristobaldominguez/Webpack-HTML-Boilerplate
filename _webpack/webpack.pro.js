@@ -1,10 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 const common = require('./webpack.common')
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
 
@@ -26,9 +25,7 @@ module.exports = merge(common, {
           {
             loader: 'postcss-loader',
             options: {
-              config: { 
-                path: './postcss.config.js' 
-              } 
+              postcssOptions: { path: './postcss.config' } 
             }
           },
           'sass-loader'
@@ -38,24 +35,26 @@ module.exports = merge(common, {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader'
+          loader: "babel-loader", 
+          options: {
+            presets: ["@babel/preset-env"]
+          }
         }
       }
     ]
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({ filename: 'styles/style.css' }),
+    new MiniCssExtractPlugin({ filename: 'styles/[name].css' }),
     new webpack.LoaderOptionsPlugin({
       options: {
-          postcss: [autoprefixer()]
+        postcss: [autoprefixer()]
       }
     })
   ],
   optimization: {
     minimizer: [
       new TerserPlugin(),
-      new OptimizeCssAssetsPlugin()
     ]
   }
 })
