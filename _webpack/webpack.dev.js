@@ -32,16 +32,6 @@ module.exports = merge(common, {
             options: { sourceMap: true }
           }
         ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ["@babel/preset-env"]
-          }
-        }
       }
     ]
   },
@@ -62,7 +52,7 @@ module.exports = merge(common, {
       directory: root_path(),
     },
     open: configuration.serverOpen || true,
-    port: configuration.serverPort || 8081,
+    port: configuration.serverPort || 8080,
     host: configuration.serverHost || '0.0.0.0',
     hot: true,
     compress: true
